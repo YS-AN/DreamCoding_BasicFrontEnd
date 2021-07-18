@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Window Size</title>
+  <style>
+    .tag {
+      display: inline-block;
+      background-color: thistle;
+      padding: 16px;
+      margin-top: 16px;
+      font-size: 48px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="tag">WINDOW SIZE</div>
+  <script>
+    const tag = document.querySelector('.tag'); // .(dot) + 태그 작성 -> DOM요소 중 클래스 tag인 첫번째가 변수에 할당된다 -> 따라서 tag = <div>를 가리키게 됨
+    function updateTag() {
+      tag.innerHTML = `
+        window.screen: ${window.screen.width}, ${window.screen.height} <br>
+        window.outer: ${window.outerWidth}, ${window.outerHeight} <br>
+        document.documentElement: ${document.documentElement.clientWidth}, ${document.documentElement.clientHeight}`;
+    }
+    window.addEventListener('resize', () => {
+
+      //console.log('resize');
+      //console.log(
+      //  `window.screen: ${window.screen.width}, ${window.screen.height}`
+      //);
+      //console.log(
+      //  `window.outer: ${window.outerWidth}, ${window.outerHeight}`
+      //);
+      //console.log(
+      //  `window.inner: ${window.innerWidth}, ${window.innerHeight}`
+      //);
+      //console.log(
+      //  `document.documentElement: ${document.documentElement.clientWidth}, ${document.documentElement.clientHeight}`
+      //);
+
+      //함수로 변경
+      //tag.innerHTML = `
+      //  window.screen: ${window.screen.width}, ${window.screen.height} <br>
+      //  window.outer: ${window.outerWidth}, ${window.outerHeight} <br>
+      //  document.documentElement: ${document.documentElement.clientWidth}, ${document.documentElement.clientHeight}`;
+      updateTag();
+    });
+
+    updateTag();
+  </script>
+</body>
+
+</html>
