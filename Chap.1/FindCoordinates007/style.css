@@ -1,0 +1,36 @@
+body {
+    background-color: black;
+}
+
+.line {
+    position: absolute; /*원하는 곳 자유 자재로 바꿀 수 있도록 */
+    background-color: skyblue;
+}
+
+.horizontal{
+    width: 100%;/*수평으로 웹 페이지 전체에 그려지도록*/
+    height: 1px;
+    top: 50%;
+}
+
+.vertical{
+    height: 100%; /*위에서 부터 아래까지 전체적으로 그려지도록 */
+    width: 1px;
+    left: 50%
+}
+
+.target{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);/*타켓 위치를 수평, 수직 교차하는 곳 중앙에 정확히 오도록 지정하기 위함*/
+}
+
+.tag{
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(20%, 20%);
+    font-size: 40px;
+}
